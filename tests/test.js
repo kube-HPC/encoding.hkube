@@ -3,6 +3,12 @@ const { expect } = chai;
 const { Encoding } = require('../index');
 
 describe('Encoding', () => {
+    describe('Validation', () => {
+        it('default json encoding', async () => {
+            const encoding = new Encoding();
+            expect(encoding._type).to.eql('json');
+        });
+    });
     describe('BSON', () => {
         it('put and get same value', async () => {
             const encoding = new Encoding({ type: 'bson' });
