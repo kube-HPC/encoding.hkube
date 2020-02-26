@@ -10,7 +10,28 @@ describe('Encoding', () => {
         });
     });
     describe('BSON', () => {
-        it('put and get same value', async () => {
+        it('put and get same string value', async () => {
+            const encoding = new Encoding({ type: 'bson' });
+            const data = 'hello';
+            const encoded = encoding.encode(data);
+            const decoded = encoding.decode(encoded);
+            expect(data).to.eql(decoded);
+        });
+        it('put and get same number value', async () => {
+            const encoding = new Encoding({ type: 'bson' });
+            const data = 590.45;
+            const encoded = encoding.encode(data);
+            const decoded = encoding.decode(encoded);
+            expect(data).to.eql(decoded);
+        });
+        it('put and get same array value', async () => {
+            const encoding = new Encoding({ type: 'bson' });
+            const data = [1, 2, 3, false, { bla: 'bla' }, [34]];
+            const encoded = encoding.encode(data);
+            const decoded = encoding.decode(encoded);
+            expect(data).to.eql(decoded);
+        });
+        it('put and get same object value', async () => {
             const encoding = new Encoding({ type: 'bson' });
             const data = {
                 string: 'hello',
@@ -29,7 +50,28 @@ describe('Encoding', () => {
         });
     });
     describe('JSON', () => {
-        it('put and get same value', async () => {
+        it('put and get same string value', async () => {
+            const encoding = new Encoding({ type: 'json' });
+            const data = 'hello';
+            const encoded = encoding.encode(data);
+            const decoded = encoding.decode(encoded);
+            expect(data).to.eql(decoded);
+        });
+        it('put and get same number value', async () => {
+            const encoding = new Encoding({ type: 'json' });
+            const data = 590.45;
+            const encoded = encoding.encode(data);
+            const decoded = encoding.decode(encoded);
+            expect(data).to.eql(decoded);
+        });
+        it('put and get same array value', async () => {
+            const encoding = new Encoding({ type: 'json' });
+            const data = [1, 2, 3, false, { bla: 'bla' }, [34]];
+            const encoded = encoding.encode(data);
+            const decoded = encoding.decode(encoded);
+            expect(data).to.eql(decoded);
+        });
+        it('put and get same object value', async () => {
             const encoding = new Encoding({ type: 'json' });
             const data = {
                 string: 'hello',
