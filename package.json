@@ -1,6 +1,6 @@
 {
   "name": "@hkube/encoding",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "hkube encoding abstraction for binary,bson,json",
   "main": "index.js",
   "scripts": {
