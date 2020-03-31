@@ -47,6 +47,10 @@ describe('Encoding', () => {
                 const decoded = encoding.decode(encoded);
                 expect(data).to.eql(decoded);
             });
+            it('check isBinary', () => {
+                const encoding = new Encoding({ type });
+                expect(encoding).to.have.property('isBinary');
+            });
         });
     })
 });
