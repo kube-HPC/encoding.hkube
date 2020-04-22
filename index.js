@@ -1,5 +1,4 @@
-const Encoding = require('./lib/encoding');
-const { EncodingTypes } = require('./lib/encoding-types');
+const { Encoding, EncodingTypes } = require('./lib/encoding');
 
 module.exports = {
     Encoding,
