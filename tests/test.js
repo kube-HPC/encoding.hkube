@@ -37,7 +37,7 @@ describe('Encoding', () => {
                 const data = {
                     string: 'hello',
                     number: 55,
-                    val: null, 
+                    val: null,
                     array: [1, 2, 3, false, { bla: 'bla' }, [34]],
                     object: {
                         prop: 'prop',
