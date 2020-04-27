@@ -1,7 +1,7 @@
 {
   "name": "@hkube/encoding",
   "version": "1.0.10",
-  "description": "hkube encoding abstraction for binary,bson,json",
+  "description": "hkube encoding abstraction for msgpack,bson,json",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/eslint/bin/eslint.js .",
