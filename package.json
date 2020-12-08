@@ -1,6 +1,6 @@
 {
   "name": "@hkube/encoding",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "hkube encoding abstraction for msgpack,bson,json",
   "main": "index.js",
   "scripts": {
